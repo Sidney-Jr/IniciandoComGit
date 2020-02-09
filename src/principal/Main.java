@@ -29,7 +29,6 @@ public class Main {
         
         System.out.println(nomes.get(0).getIdade());
         System.out.println(nomes.get(0).getNome());
-        System.out.println("");
 
     }
     
