@@ -7,7 +7,7 @@ package principal;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import model.Aluno;
 /**
  *
  * @author renoa
@@ -16,22 +16,20 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
-        ArrayList<String> nomes = new ArrayList();
+        ArrayList<Aluno> nomes = new ArrayList();
         
-        System.out.print("Quantos nomes você vai cadastrar: ");
-        int size = input.nextInt();
-        input.nextLine();
+        System.out.println("Digite o nome do aluno: ");
+        String nome = input.nextLine();
+        System.out.println("Digite aa idade do aluno: ");
+        int idade = input.nextInt();
+                input.nextLine();
+                
+        Aluno aluno = new Aluno(nome, idade);
+        nomes.add(aluno);
         
-        for (int i = 0; i < size; i++) {
-            System.out.print("Digite o "+(i+1)+" nome: ");
-            String nome = input.nextLine();
-            nomes.add(nome);
-        }
-        
-        for (String nome : nomes) {
-            System.out.println("Nome "+ nome);
-        }
-        
+        System.out.println(nomes.get(0).getIdade());
+        System.out.println(nomes.get(0).getNome());
+
     }
     
 }
